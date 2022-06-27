@@ -1,24 +1,13 @@
 # My Memory
 
-![](https://github.com/rpandey1234/MyMemory/blob/main/assets/ConsumeFlow.gif)
-
-**Author:** [Rahul Pandey](https://www.youtube.com/rpandey1234)
-
 <a href='https://play.google.com/store/apps/details?id=com.rkpandey.mymemory'><img width="200px" src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' /></a>
-
-Watch the [YouTube walkthrough video](https://www.youtube.com/watch?v=ivZN2Ozs5fA&list=PL7NYbSE8uaBCvfw20f0Q6pNSGgiYGLwzI)
 
 An open-source Android memory game. Play with the default icons, or play a custom game using photos from your phone. You can also download memory boards made by others by entering the game name.
 
 Here are some sample games you can try out:
-- `corgi`
-- `rahul`
-- `bitmoji`
+- `funnyfaces`
+- `funnyfaces2'
 
-<p float="middle">
-    <img width="250px" src='https://github.com/rpandey1234/MyMemory/blob/main/assets/customWinConfetti.png' />
-    <img width="250px" src='https://github.com/rpandey1234/MyMemory/blob/main/assets/creationFlow.png' />
-</p>
 
 Open source libraries used:
 - Picasso: https://github.com/square/picasso
@@ -26,7 +15,6 @@ Open source libraries used:
 
 # License
 
-    Copyright 2020 Rahul Pandey
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
