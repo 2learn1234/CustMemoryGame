@@ -33,6 +33,7 @@ import com.firas.mymemory.models.BoardSize
 import com.firas.mymemory.utils.BitmapScaler
 import com.firas.mymemory.utils.EXTRA_BOARD_SIZE
 import com.firas.mymemory.utils.EXTRA_GAME_NAME
+import com.github.dhaval2404.imagepicker.ImagePicker
 import java.io.ByteArrayOutputStream
 
 class CreateActivity : AppCompatActivity() {
@@ -102,7 +103,7 @@ class CreateActivity : AppCompatActivity() {
 
   override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
     super.onActivityResult(requestCode, resultCode, data)
-    if (requestCode != PICK_PHOTO_CODE || resultCode != Activity.RESULT_OK || data == null) {
+    if (resultCode != Activity.RESULT_OK || data == null) {
       Log.w(TAG, "Did not get data back from the launched activity, user likely canceled flow")
       return
     }
@@ -235,9 +236,10 @@ class CreateActivity : AppCompatActivity() {
   }
 
   private fun launchIntentForPhotos() {
-    val intent = Intent(Intent.ACTION_PICK)
-    intent.type = "image/*"
-    intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true)
-    startActivityForResult(Intent.createChooser(intent, "Choose pics"), PICK_PHOTO_CODE)
+    ImagePicker.with(this)
+      .crop()	    			//Crop image(Optional), Check Customization for more option
+      .compress(1024)			//Final image size will be less than 1 MB(Optional)
+      .maxResultSize(800, 800)	//Final image resolution will be less than 1080 x 1080(Optional)
+      .start()
   }
 }

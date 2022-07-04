@@ -105,12 +105,6 @@ class MainActivity : AppCompatActivity() {
         showDownloadDialog()
         return true
       }
-      R.id.mi_about -> {
-    //    firebaseAnalytics.logEvent("open_about_link", null)
-        val aboutLink = remoteConfig.getString("about_link")
-        startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(aboutLink)))
-        return true
-      }
     }
     return super.onOptionsItemSelected(item)
   }
